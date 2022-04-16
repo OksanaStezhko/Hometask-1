@@ -1,0 +1,48 @@
+.notes-header__list {
+  display: flex;
+
+  padding: 10px;
+  background-color: grey;
+  font-size: 20px;
+  color: white;
+}
+
+.notes-line__list {
+  display: flex;
+}
+
+.notes-line__list > li {
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.notes-line__list {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: gainsboro;
+}
+
+.column-one {
+  width: 400px;
+}
+
+.column-two {
+  width: 100px;
+}
+
+.column-three {
+  width: 200px;
+}
+
+.column-four {
+  width: 500px;
+  flex-grow: 1;
+}
+
+.column-five {
+  width: 100px;
+}
+
+.column-six {
+  width: 100px;
+}
