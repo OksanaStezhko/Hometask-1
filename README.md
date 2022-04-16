@@ -38,7 +38,7 @@ npm run dev
 ```json
 "homepage": "https://имя_пользователя.github.io/имя_репозитория",
 "scripts": {
-  "build": "parcel build src/*.html --public-url /имя_репозитория/"
+  "build": "parcel build src/*.html -- /имя_репозитория/"
 },
 ```
 
