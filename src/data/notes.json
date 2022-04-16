@@ -5,7 +5,7 @@
     "category": "Task",
     "content": "Tomato, bread",
     "dates": "",
-    "arhived": false
+    "archived": false
   },
   {
     "name": "The theory of evolution",
@@ -13,7 +13,7 @@
     "category": "Random Thought",
     "content": "The evolution...",
     "dates": "",
-    "arhived": false
+    "archived": false
   },
   {
     "name": "New Feature",
@@ -21,15 +21,15 @@
     "category": "Idea",
     "content": "New idea",
     "dates": "",
-    "arhived": false
+    "archived": true
   },
   {
     "name": "William Gaddis",
-    "created": "0/05/2021",
+    "created": "02/05/2021",
     "category": "Quote",
     "content": "Power doesn't corrupt people, people corrupt power",
     "dates": "",
-    "arhived": false
+    "archived": true
   },
   {
     "name": "Books",
@@ -37,14 +37,14 @@
     "category": "Task",
     "content": "The Lean Startup",
     "dates": "",
-    "arhived": false
+    "archived": false
   },
   {
-    "name": "Shopping list",
-    "created": "20/04/2021",
+    "name": "Homework",
+    "created": "01/04/2021",
     "category": "Task",
-    "content": "Tomato, bread",
+    "content": "Code",
     "dates": "",
-    "arhived": false
+    "archived": true
   }
 ]

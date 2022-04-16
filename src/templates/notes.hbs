@@ -5,7 +5,9 @@
     <li class='notes-header__item column-three'>Category</li>
     <li class='notes-header__item column-four'>Content</li>
     <li class='notes-header__item column-five'>Dates</li>
-    <li class='notes-header__item column-six'>Archived</li>
+    <li class='notes-header_button'>edit</li>
+    <li class='notes-header_button'><button class='button-archived'>archived</button></li>
+    <li class='notes-header_button'>deleted</li>
   </ul>
 </li>
 {{#each this}}
@@ -16,7 +18,10 @@
       <li class='notes-line__column column-three'>{{category}}</li>
       <li class='notes-line__column column-four'>{{content}}</li>
       <li class='notes-line__column column-five'>{{dates}}</li>
-      <li class='notes-line__column column-six'>{{arhived}}</li>
+      <li class='notes-line_button'><button class='button-edit'>edit</button></li>
+      <li class='notes-line_button'><button class='button-archived'>archived</button></li>
+      <li class='notes-line_button'><button class='button-deleted'>deleted</button></li>
+
     </ul>
 
   </li>
