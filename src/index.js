@@ -1,4 +1,6 @@
 import './sass/main.scss';
+import moment from 'moment';
+
 import notesItems from './data/notes.json';
 import { renderNotes } from './js/notes';
 import { renderSummary } from './js/summary';
@@ -30,6 +32,8 @@ const toggleModal = function () {
 
 const onClickCreate = function (event) {
   toggleModal();
+  dateCreated.value = moment().format('YYYY-MM-DD');
+  // dateCreated.insertAdjacentHTML('beforeend', 'value = "2022-02-02"');
 };
 
 const onSubmitForm = function (event) {
@@ -56,9 +60,14 @@ const closeModalBtn = document.querySelector('[data-modal-close]');
 // const editModalBtn = document.querySelector('[data-modal-edit]');
 const modalForm = document.querySelector('[data-modal]');
 const submitForm = document.querySelector('.form-modal__submit');
+const dateCreated = document.querySelector('.js-date-created');
 
 notesList.addEventListener('click', onClickButton);
 createModalBtn.addEventListener('click', onClickCreate);
 closeModalBtn.addEventListener('click', toggleModal);
 modalForm.addEventListener('submit', onSubmitForm);
+// console.log('2022/05/06'.format('YYYY-MM-DD'));
+
 // editModalBtn.addEventListener('click', toggleModal);
+var t = moment('2002-05-05').locale('en').format('MMM DD, YYYY');
+console.log(t); // 02.07.2016
