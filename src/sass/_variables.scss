@@ -1,0 +1,47 @@
+//Переменные цветов
+$text-main: #757575;
+$text-header: #212121;
+$text-on-dark: #ffffff;
+
+$bgd-second: #f5f4fa;
+$bgd-hover: #188ce8;
+$bgd-icon-footer: rgba(255, 255, 255, 0.1);
+$bgd-menu: #ffffff;
+
+$bgd-primary: rgba(47, 48, 58, 0.4);
+$bgd-label: rgba(47, 48, 58, 0.8);
+$bgd-overley: rgba(33, 150, 243, 0.9);
+$bgd-backdrop: rgba(0, 0, 0, 0.2);
+
+$color-accent: #2196f3;
+$color-line: #ececec;
+$color-border: #eeeeee;
+$color-border-modal: rgba(0, 0, 0, 0.1);
+$color-icon: #afb1b8;
+$color-section: #2f303a;
+$color-link-address: rgba(255, 255, 255, 0.6);
+
+//Переменные для анимации
+$time-function: cubic-bezier(0.4, 0, 0.2, 1);
+$time: 250ms;
+
+//Типография
+$font-main: 'Roboto', sans-serif;
+$font-second: 'Raleway', sans-serif;
+$font-style: normal;
+$size-title: 36px;
+$line-height-title: 1.16;
+$letter-spacing-main: 0.03em;
+
+//Тень
+$shadow-button-primary: 0px 4px 4px rgba(0, 0, 0, 0.15);
+$shadow-button-filters: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+  0px 2px 2px rgba(0, 0, 0, 0.12);
+$shadow-card-members: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+$shadow-link-projects: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+  1px 4px 6px rgba(0, 0, 0, 0.16);
+$shadow-modal: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+$shadow-button-modal: 0px 4px 4px rgba(0, 0, 0, 0.15);
+$shadow-input-footer: 0px 4px 4px rgba(0, 0, 0, 0.15);
