@@ -1,5 +1,5 @@
 import './sass/main.scss';
-import './js/variables.js';
+
 import './js/renderPage.js';
 
 const onClickButton = function (event) {

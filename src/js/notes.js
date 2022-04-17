@@ -6,8 +6,9 @@ const renderNotes = function () {
   const notesRef = document.querySelector('.js-notes');
 
   notesRef.insertAdjacentHTML('beforeend', markup);
+  console.log('heare');
 };
 
-const addNote = function () {};
+// const addNote = function () {};
 
 export { renderNotes };
