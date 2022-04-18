@@ -29,15 +29,15 @@
 }
 
 .column-one {
-  width: 400px;
+  width: 200px;
 }
 
 .column-two {
-  width: 250px;
+  width: 200px;
 }
 
 .column-three {
-  width: 300px;
+  width: 200px;
 }
 
 .column-four {
@@ -46,16 +46,18 @@
 }
 
 .column-five {
-  width: 100px;
+  width: 300px;
 }
 
 .button-wrapper {
   display: flex;
   justify-content: right;
+  padding: 5px;
+  margin-top: auto;
 }
 .button-create {
   padding: 5px;
-  margin: 5px;
+  margin-top: auto;
 }
 
 .summary {
@@ -66,7 +68,7 @@
   height: 70%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
   overflow: auto;
   flex-grow: 1;
 }

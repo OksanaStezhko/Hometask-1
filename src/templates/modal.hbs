@@ -1,33 +1,25 @@
+<li class='form-inputs__item'>
+  <label class='form-inputs__field'><span class='form-inputs__label'>Name</span>
+    <input type='text' name='name' class='form-inputs__input' />
+  </label>
+</li>
+<li class='form-inputs__item'>
+  <label class='form-inputs__field'><span class='form-inputs__label'>Created</span>
+    <input type='date' name='created' class='form-inputs__input js-date-created' />
+  </label>
+</li>
+<li class='form-inputs__item'>
+  <label class='form-inputs__field'><span class='form-inputs__label'>Category</span>
+    <select name='category' class='form-select' id='category'>
+      <option value='Task'>Task</option>
+      <option value='Random Thought' selected>Random Thought</option>
+      <option value='Idea'>Idea</option>
+    </select>
+  </label>
+</li>
 
-  <li class='form-inputs__item'>
-    <label class='form-inputs__field'><span class='form-inputs__label'>Name</span>
-      <input type='text' name='name' class='form-inputs__input' />
-    </label>
-  </li>
-  <li class='form-inputs__item'>
-    <label class='form-inputs__field'><span class='form-inputs__label'>Created</span>
-      <input type='text' name='created' class='form-inputs__input' />
-    </label>
-  </li>
-  <li class='form-inputs__item'>
-    <label class='form-inputs__field'><span class='form-inputs__label'>Category</span>
-      <input type='text' name='category' class='form-inputs__input' />
-    </label>
-  </li>
-
-  <li class='form-inputs__item'>
-    <label class='form-inputs__field'><span class='form-inputs__label'>Contest</span>
-      <textarea
-        name='comment'
-        rows='3'
-        class='form-inputs__contest'
-        placeholder='Введите текст'
-      ></textarea>
-    </label>
-  </li>
-  <li class='form-inputs__item'>
-    <label class='form-inputs__field'><span class='form-inputs__label'>Dates</span>
-      <input type='text' name='dates' class='form-inputs__input' />
-    </label>
-  </li>
-</ul>
+<li class='form-inputs__item'>
+  <label class='form-inputs__field'><span class='form-inputs__label'>Contest</span>
+    <textarea name='comment' rows='3' class='form-inputs__input'></textarea>
+  </label>
+</li>
