@@ -1,25 +1,31 @@
 <li class='form-inputs__item'>
   <label class='form-inputs__field'><span class='form-inputs__label'>Name</span>
-    <input type='text' name='name' class='form-inputs__input' />
+    <input type='text' name='name' class='form-inputs__input' {{#if name}} value= {{name }} {{/if}} />
   </label>
 </li>
 <li class='form-inputs__item'>
   <label class='form-inputs__field'><span class='form-inputs__label'>Created</span>
-    <input type='date' name='created' class='form-inputs__input js-date-created' />
+    <input
+      type='date'
+      name='created'
+      class='form-inputs__input js-date-created'
+      {{#if created}} value={{created}} {{/if}}
+    />
   </label>
 </li>
 <li class='form-inputs__item'>
   <label class='form-inputs__field'><span class='form-inputs__label'>Category</span>
-    <select name='category' class='form-select' id='category'>
-      <option value='Task'>Task</option>
-      <option value='Random Thought' selected>Random Thought</option>
-      <option value='Idea'>Idea</option>
+    <select name='category' class='form-select js-category-select' id='category-select'>
+              <option value="Task">Task</option>
+              <option value="Random Thought" >Random Thought</option>
+              <option value="Idea">Idea</option>
+               <option value="Quote">Quote</option>
     </select>
   </label>
 </li>
 
 <li class='form-inputs__item'>
-  <label class='form-inputs__field'><span class='form-inputs__label'>Contest</span>
-    <textarea name='comment' rows='3' class='form-inputs__input'></textarea>
+  <label class='form-inputs__field'><span class='form-inputs__label'>Content</span>
+    <textarea name='comment' rows='3' class='form-inputs__input'>{{#if content}}{{content}}{{/if}}</textarea>
   </label>
 </li>
