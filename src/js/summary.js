@@ -1,5 +1,3 @@
-import summaryItems from '../data/notes.json';
-
 import summaryTemplate from '../templates/summary.hbs';
 
 const sumNotes = function (arrInit) {
@@ -26,10 +24,10 @@ const sumNotes = function (arrInit) {
   return arrRes;
 };
 
-const renderSummary = function () {
-  const markup = summaryTemplate(sumNotes(summaryItems));
+const renderSummary = function (arr) {
+  const markup = summaryTemplate(sumNotes(arr));
   const summaryRef = document.querySelector('.js-summary');
-
+  summaryRef.innerHTML = '';
   summaryRef.insertAdjacentHTML('beforeend', markup);
 };
 

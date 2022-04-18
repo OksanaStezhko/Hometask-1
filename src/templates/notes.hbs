@@ -1,26 +1,25 @@
-<li class='notes-header'>
-  <ul class='notes-header__list'>
-    <li class='notes-header__item column-one'>Name</li>
-    <li class='notes-header__item column-two'>Created</li>
-    <li class='notes-header__item column-three'>Category</li>
-    <li class='notes-header__item column-four'>Content</li>
-    <li class='notes-header__item column-five'>Dates</li>
-    <li class='notes-header_button'>edit</li>
-    <li class='notes-header_button'><button class='button-archived'>archived</button></li>
-    <li class='notes-header_button'>deleted</li>
-  </ul>
-</li>
 {{#each this}}
   <li class='notes-line'>
     <ul class='notes-line__list'>
       <li class='notes-line__column column-one'>{{name}}</li>
+
       <li class='notes-line__column column-two'>{{created}}</li>
       <li class='notes-line__column column-three'>{{category}}</li>
       <li class='notes-line__column column-four'>{{content}}</li>
       <li class='notes-line__column column-five'>{{dates}}</li>
-      <li class='notes-line_button'><button class='button-edit'>edit</button></li>
-      <li class='notes-line_button'><button class='button-archived'>archived</button></li>
-      <li class='notes-line_button'><button class='button-deleted'>deleted</button></li>
+      <li class='notes-line_button'><button
+          type='button'
+          class='button-edit'
+          data-modal-edit
+        >edit</button></li>
+      <li class='notes-line_button'><button
+          type='button'
+          class='button-archived'
+        >archived</button></li>
+      <li class='notes-line_button'><button
+          type='button'
+          class='button-deleted'
+        >deleted</button></li>
 
     </ul>
 

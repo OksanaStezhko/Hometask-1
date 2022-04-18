@@ -1,0 +1,92 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background-color: $bgd-backdrop;
+  opacity: 1;
+  overflow-y: scroll;
+  z-index: 1;
+  transition: opacity $time $time-function;
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  position: relative;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 400px;
+
+  background-color: $text-on-dark;
+  box-shadow: $shadow-modal;
+  border-radius: 4px;
+  transition: transform $time $time-function $time;
+
+  &__button-close {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: 8px;
+    right: 8px;
+    padding: 0;
+    margin: 0;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $text-on-dark;
+    border: 1px solid $color-border-modal;
+    transition: fill $time $time-function, transform $time $time-function;
+  }
+
+  &__button-close:hover {
+    fill: $color-accent;
+    outline-color: $color-border;
+    transform: scale(1.1);
+  }
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+.form-modal {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-inputs {
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-inputs__field {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-inputs__label {
+  width: 100px;
+}
+
+.form-inputs__input,
+.form-select {
+  flex-grow: 1;
+}
