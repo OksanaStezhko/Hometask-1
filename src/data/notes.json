@@ -1,50 +1,50 @@
 [
   {
+    "id": "2132",
     "name": "Shopping list",
     "created": "2020-05-03",
     "category": "Task",
     "content": "Tomato, bread",
-    "dates": "",
     "archived": false
   },
   {
+    "id": "56654",
     "name": "The theory of evolution",
     "created": "2022-01-05",
     "category": "Random Thought",
-    "content": "The evolution...",
-    "dates": "",
+    "content": "The evolution 05/01/2020 with 03-03-2022",
     "archived": false
   },
   {
+    "id": "9864",
     "name": "New Feature",
     "created": "2022-02-03",
     "category": "Idea",
-    "content": "New idea",
-    "dates": "",
+    "content": "New idea 12.25.2002",
     "archived": true
   },
   {
+    "id": "3785",
     "name": "William Gaddis",
     "created": "2022-01-20",
     "category": "Quote",
     "content": "Power doesn't corrupt people, people corrupt power",
-    "dates": "",
     "archived": true
   },
   {
+    "id": "8979",
     "name": "Books",
     "created": "2022-02-15",
     "category": "Task",
     "content": "The Lean Startup",
-    "dates": "",
     "archived": false
   },
   {
+    "id": "8522",
     "name": "Homework",
     "created": "2022-03-03",
     "category": "Task",
-    "content": "Code",
-    "dates": "",
+    "content": "Code at 06/03/2021",
     "archived": true
   }
 ]
