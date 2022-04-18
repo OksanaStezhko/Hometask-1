@@ -21,7 +21,7 @@
           <li class="notes-header__item column-four">Content</li>
           <li class="notes-header__item column-five">Dates</li>
           <li class="notes-header_button">edit</li>
-          <li class="notes-header_button"><button class="button-archived">archived</button></li>
+          <li class="notes-header_button"><button class="button-archived" data-archived="false">archived</button></li>
           <li class="notes-header_button">deleted</li>
         </ul>
 
@@ -42,34 +42,9 @@
           <use href="./images/sprite.svg#icon-close"></use>
         </svg></button>
 
-      <form autocomplete="off" id="form-modal" class="form-modal">
+      <form autocomplete="off" class="form-modal">
         <h3 class="modal__title">New note:</h3>
-        <ul class="form-inputs">
-          <li class='form-inputs__item'>
-            <label class='form-inputs__field'><span class='form-inputs__label'>Name</span>
-              <input type='text' name='name' class='form-inputs__input' />
-            </label>
-          </li>
-          <li class='form-inputs__item'>
-            <label class='form-inputs__field'><span class='form-inputs__label'>Created</span>
-              <input type='date' name='created' class='form-inputs__input js-date-created' />
-            </label>
-          </li>
-          <li class='form-inputs__item'>
-            <label class='form-inputs__field'><span class='form-inputs__label'>Category</span>
-            <select name="category" class = "form-select" id="category">
-              <option value="Task">Task</option>
-              <option value="Random Thought" selected>Random Thought</option>
-              <option value="Idea">Idea</option>
-            </select>
-               </label>
-          </li>
-
-          <li class='form-inputs__item'>
-            <label class='form-inputs__field'><span class='form-inputs__label'>Contest</span>
-              <textarea name='comment' rows='3' class='form-inputs__input'></textarea>
-            </label>
-          </li>
+        <ul class="form-inputs js-modal">
         </ul>
         </ul>
         <button type="submit" class="form-modal__submit">Записать</button>
