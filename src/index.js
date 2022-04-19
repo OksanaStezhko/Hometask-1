@@ -9,25 +9,12 @@ import { renderModal } from './js/modal';
 
 let notesItems = [...initNotesItems]; //вводим переменную-массив для корректного редактирования notes
 
-const renderPage = function (arr) {
+const renderPage = function (arr = notesItems) {
   const signArchived = buttonArchived.dataset.archived;
+
   renderNotes(arr, signArchived);
   renderSummary(arr);
-};
-
-const onClickButton = function (event) {
-  if (event.target.nodeName !== 'BUTTON') {
-    return;
-  }
-  if (event.target.classList.contains('button-edit')) {
-    onClickEdit(event);
-  }
-  if (event.target.classList.contains('button-archived')) {
-    console.log('Кнопка архивирования');
-  }
-  if (event.target.classList.contains('button-deleted')) {
-    console.log('Кнопка удаления');
-  }
+  notesItems = [...arr];
 };
 
 const toggleModal = function () {
@@ -35,7 +22,7 @@ const toggleModal = function () {
   modalBackdrop.classList.toggle('is-hidden');
 };
 
-const onClickEdit = function (event) {
+const editNotes = function (event) {
   const idNote = event.target.dataset.index;
   const editNote = notesItems.find(elem => elem.id === idNote);
   toggleModal();
@@ -43,6 +30,38 @@ const onClickEdit = function (event) {
   modalForm.querySelector('.js-category-select').value = editNote.category;
   modalForm.dataset.mode = 'edit';
   modalForm.dataset.indexEditNote = idNote;
+};
+
+const archiveNotes = function (event) {
+  const idNote = event.target.dataset.index;
+  const updatedNotesItems = notesItems.map(elem => {
+    if (elem.id === idNote) {
+      return { ...elem, archived: !elem.archived };
+    }
+    return elem;
+  });
+  renderPage(updatedNotesItems);
+};
+
+const deleteNotes = function (event) {
+  const idNote = event.target.dataset.index;
+  const updatedNotesItems = notesItems.filter(elem => elem.id !== idNote);
+  renderPage(updatedNotesItems);
+};
+
+const onClickButton = function (event) {
+  if (event.target.nodeName !== 'BUTTON') {
+    return;
+  }
+  if (event.target.classList.contains('button-edit')) {
+    editNotes(event);
+  }
+  if (event.target.classList.contains('button-archived')) {
+    archiveNotes(event);
+  }
+  if (event.target.classList.contains('button-deleted')) {
+    deleteNotes(event);
+  }
 };
 
 const onClickCreate = function (event) {
@@ -72,26 +91,31 @@ const onSubmitForm = function (event) {
   if (modalMode === 'edit') {
     updatedNotesItems = notesItems.map(elem => {
       if (elem.id === idNote) {
-        return { ...newNote, id: idNote };
+        return { ...newNote, id: idNote, archived: elem.archived };
       }
       return elem;
     });
   }
+
   renderPage(updatedNotesItems);
-  notesItems = [...updatedNotesItems];
+
   event.target.reset();
   toggleModal();
 };
 
-const onClickButtonArchived = function (event) {
-  const currentValue = event.target.dataset.archived;
+const defineNewArchivedValue = function (oldValue) {
   let newValue;
-
-  if (currentValue === 'true') {
+  if (oldValue === 'true') {
     newValue = 'false';
-  } else {
+  }
+  if (oldValue === 'false') {
     newValue = 'true';
   }
+  return newValue;
+};
+const onClickButtonArchived = function (event) {
+  const currentValue = event.target.dataset.archived;
+  const newValue = defineNewArchivedValue(currentValue);
   event.target.dataset.archived = newValue;
   renderNotes(notesItems, newValue);
 };

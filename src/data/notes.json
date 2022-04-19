@@ -21,7 +21,7 @@
     "created": "2022-02-03",
     "category": "Idea",
     "content": "New idea 12.25.2002",
-    "archived": true
+    "archived": false
   },
   {
     "id": "3785",
@@ -29,7 +29,7 @@
     "created": "2022-01-20",
     "category": "Quote",
     "content": "Power doesn't corrupt people, people corrupt power",
-    "archived": true
+    "archived": false
   },
   {
     "id": "8979",
@@ -45,6 +45,6 @@
     "created": "2022-03-03",
     "category": "Task",
     "content": "Code at 06/03/2021",
-    "archived": true
+    "archived": false
   }
 ]
