@@ -1,5 +1,22 @@
-import summaryTemplate from '../templates/summary.hbs';
+import moment from 'moment';
 import { categories } from '../js/variables.js';
+
+const re = /[0-1]?[0-9][-\.\/][0-3]?[0-9][-\.\/][12][09][0-9][0-9]/g;
+
+const formatedNotes = function (arr) {
+  const formatedArr = arr.map(elem => {
+    const formatedDate = moment(elem.created).locale('en').format('MMM DD, YYYY');
+    const arrDates = elem.content.match(re);
+    const selectionDates = !!arrDates ? arrDates.join(', ') : '';
+    return {
+      ...elem,
+      created: formatedDate,
+      dates: selectionDates,
+      image: categories[elem.category],
+    };
+  });
+  return formatedArr;
+};
 
 const sumNotes = function (arrInit) {
   const arrRes = arrInit.reduce((acc, elem, idx, array) => {
@@ -26,17 +43,4 @@ const sumNotes = function (arrInit) {
   return arrRes;
 };
 
-const renderSummary = function (arr) {
-  const summaryRef = document.querySelector('.js-summary');
-  if (!arr.length) {
-    summaryRef.innerHTML = '';
-    return;
-  }
-
-  const markup = summaryTemplate(sumNotes(arr));
-
-  summaryRef.innerHTML = '';
-  summaryRef.insertAdjacentHTML('beforeend', markup);
-};
-
-export { renderSummary };
+export { sumNotes, formatedNotes };

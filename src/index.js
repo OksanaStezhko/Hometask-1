@@ -3,9 +3,7 @@ import moment from 'moment';
 import { v4 as uuidv4 } from 'uuid';
 
 import initNotesItems from './data/notes.json';
-import { renderNotes } from './js/notes';
-import { renderSummary } from './js/summary';
-import { renderModal } from './js/modal';
+import { renderNotes, renderSummary, renderModal } from './js/render';
 
 let notesItems = [...initNotesItems]; //вводим переменную-массив для корректного редактирования notes
 
@@ -17,7 +15,6 @@ const renderPage = function (arr = notesItems) {
 };
 
 const toggleModal = function () {
-  // document.body.classList.toggle('modal-open'); //????
   modalBackdrop.classList.toggle('is-hidden');
 };
 
@@ -120,8 +117,6 @@ const onSubmitForm = function (event) {
 };
 
 const onClickButtonArchived = function (event) {
-  console.log('ia');
-
   const currentValue = buttonArchived.dataset.archived;
   const newValue = defineNewArchivedValue(currentValue);
   buttonArchived.dataset.archived = newValue;
@@ -132,6 +127,7 @@ const onClickButtonArchived = function (event) {
 const onClickButtonDeleteAll = function () {
   renderPage([]);
 };
+
 const buttonArchived = document.querySelector('.button-archived');
 
 renderPage(notesItems);
