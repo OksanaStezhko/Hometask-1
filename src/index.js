@@ -66,13 +66,13 @@ const onClickButton = function (event) {
   }
   if (!usedElem) return;
 
-  if (usedElem.classList.contains('button-edit')) {
+  if (usedElem.classList.contains('notes__line__button-edit')) {
     editNotes(usedElem);
   }
-  if (usedElem.classList.contains('button-archived')) {
+  if (usedElem.classList.contains('notes__header__button-archived')) {
     archiveNotes(usedElem);
   }
-  if (usedElem.classList.contains('button-deleted')) {
+  if (usedElem.classList.contains('notes__line__button-deleted')) {
     deleteNotes(usedElem);
   }
 };
@@ -120,7 +120,7 @@ const onClickButtonArchived = function (event) {
   const currentValue = buttonArchived.dataset.archived;
   const newValue = defineNewArchivedValue(currentValue);
   buttonArchived.dataset.archived = newValue;
-  document.querySelector('.button-header-archived').classList.toggle('focus');
+  document.querySelector('.notes__header__button-archived__icon').classList.toggle('focus');
   renderNotes(notesItems, newValue);
 };
 
@@ -128,16 +128,16 @@ const onClickButtonDeleteAll = function () {
   renderPage([]);
 };
 
-const buttonArchived = document.querySelector('.button-archived');
+const buttonArchived = document.querySelector('.notes__header__button-archived');
 
 renderPage(notesItems);
 
 const notesList = document.querySelector('.js-notes');
 const modalBackdrop = document.querySelector('[data-modal]');
-const modalForm = document.querySelector('.form-modal');
+const modalForm = document.querySelector('.modal__form');
 const createModalBtn = document.querySelector('[data-modal-open]');
 const closeModalBtn = document.querySelector('[data-modal-close]');
-const deleteAllBtn = document.querySelector('.button-delete-all');
+const deleteAllBtn = document.querySelector('.notes__header__button-delete');
 
 notesList.addEventListener('click', onClickButton);
 createModalBtn.addEventListener('click', onClickCreate);

@@ -1,20 +1,20 @@
 {{#each this}}
-  <li class='notes-line'>
-    <ul class='notes-line__list'>
-      <li><div class='notes-line__column__wrapper'>{{{image}}}
+  <li class='notes__line'>
+    <ul class='notes__line__list'>
+      <li class='notes__line__column'><div class='notes__line__column__wrapper'>{{{image}}}
         </div></li>
-      <li class='notes-line__column column-one'>
+      <li class='notes__line__column column-one'>
         {{name}}</li>
-      <li class='notes-line__column column-two'>{{created}}</li>
-      <li class='notes-line__column column-three'>{{category}}</li>
-      <li class='notes-line__column column-four'>{{content}}</li>
-      <li class='notes-line__column column-five'>{{dates}}</li>
-      <li class='notes-line__column column-six'>
-        <button type='button' class='button-edit' data-index={{id}}>
-          <i class='fa-solid fa-pencil button-edit' data-index={{id}}></i></button>
-        <button type='button' class='button-archived' data-index={{id}}>
+      <li class='notes__line__column column-two'>{{created}}</li>
+      <li class='notes__line__column column-three'>{{category}}</li>
+      <li class='notes__line__column column-four'>{{content}}</li>
+      <li class='notes__line__column column-five'>{{dates}}</li>
+      <li class='notes__line__column column-six'>
+        <button type='button' class='notes__line__button-edit' data-index={{id}}>
+          <i class='fa-solid fa-pencil notes__line__button-edit' data-index={{id}}></i></button>
+        <button type='button' class='notes__line__button-archived' data-index={{id}}>
           <i class='fa-solid fa-box-archive'></i></button>
-        <button type='button' class='button-deleted' data-index={{id}}>
+        <button type='button' class='notes__line__button-deleted' data-index={{id}}>
           <i class='fa-solid fa-trash-can'></i></button>
       </li>
     </ul>
