@@ -1,0 +1,8 @@
+const categories = {
+  Task: '<i class="fa-solid fa-list"></i>',
+  'Random Thought': '<i class="fa-solid fa-atom"></i>',
+  Idea: '<i class="fa-solid fa-lightbulb"></i>',
+  Quote: '<i class="fa-solid fa-quote-left"></i>',
+};
+
+export { categories };
