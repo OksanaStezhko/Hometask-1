@@ -1,21 +1,21 @@
-<li class='form-inputs__item'>
-  <label class='form-inputs__field'><span class='form-inputs__label'>Name</span>
+<li class='modal__form__inputs__item'>
+  <label class='modal__form__inputs__field'><span class='modal__form__inputs__label'>Name</span>
 
-    <textarea name='name' rows = '1' class='form-inputs__input' />{{#if name}}{{name}}{{/if}} </textarea>
+    <textarea name='name' rows = '1' class='modal__form__inputs__input' />{{#if name}}{{name}}{{/if}} </textarea>
   </label>
 </li>
-<li class='form-inputs__item'>
-  <label class='form-inputs__field'><span class='form-inputs__label'>Created</span>
+<li class='modal__form__inputs__item'>
+  <label class='modal__form__inputs__field'><span class='modal__form__inputs__label'>Created</span>
     <input
       type='date'
       name='created'
-      class='form-inputs__input js-date-created'
+      class='modal__form__inputs__input js-date-created'
       {{#if created}} value={{created}} {{/if}}
     />
   </label>
 </li>
-<li class='form-inputs__item'>
-  <label class='form-inputs__field'><span class='form-inputs__label'>Category</span>
+<li class='modal__form__inputs__item'>
+  <label class='modal__form__inputs__field'><span class='modal__form__inputs__label'>Category</span>
     <select name='category' class='form-select js-category-select' id='category-select'>
               <option value="Task">Task</option>
               <option value="Random Thought" >Random Thought</option>
@@ -25,8 +25,8 @@
   </label>
 </li>
 
-<li class='form-inputs__item'>
-  <label class='form-inputs__field'><span class='form-inputs__label'>Content</span>
-    <textarea name='comment' rows='3' class='form-inputs__input'>{{#if content}}{{content}}{{/if}}</textarea>
+<li class='modal__form__inputs__item'>
+  <label class='modal__form__inputs__field'><span class='modal__form__inputs__label'>Content</span>
+    <textarea name='comment' rows='3' class='modal__form__inputs__input'>{{#if content}}{{content}}{{/if}}</textarea>
   </label>
 </li>

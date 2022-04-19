@@ -60,7 +60,7 @@
   }
 }
 
-.form-modal {
+.modal__form {
   height: 100%;
   width: 100%;
   display: flex;
@@ -68,7 +68,7 @@
   justify-content: space-between;
 }
 
-.form-inputs {
+.modal__form__inputs {
   padding: 20px;
   height: 100%;
   width: 100%;
@@ -77,16 +77,16 @@
   justify-content: space-between;
 }
 
-.form-inputs__field {
+.modal__form__inputs__field {
   display: flex;
   justify-content: space-between;
 }
 
-.form-inputs__label {
+.modal__form__inputs__label {
   width: 100px;
 }
 
-.form-inputs__input,
+.modal__form__inputs__input,
 .form-select {
   flex-grow: 1;
 }

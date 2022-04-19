@@ -16,33 +16,33 @@
 
     <div class="container">
       <section class="notes">
-        <ul class="notes-header__list">
-          <li class="notes-header__item column-one">Name</li>
-          <li class="notes-header__item column-two">Created</li>
-          <li class="notes-header__item column-three">Category</li>
-          <li class="notes-header__item column-four">Content</li>
-          <li class="notes-header__item column-five">Dates</li>
+        <ul class="notes__header__list">
+          <li class="notes__header__item column-one">Name</li>
+          <li class="notes__header__item column-two">Created</li>
+          <li class="notes__header__item column-three">Category</li>
+          <li class="notes__header__item column-four">Content</li>
+          <li class="notes__header__item column-five">Dates</li>
 
-          <li class="notes-header__buttons"><button type="button" class="button-archived" data-archived="false">
-              <i class="fa-solid fa-box-archive button-header-archived"></i></button>
-            <button type="button" class="button-delete-all"><i class='fa-solid fa-trash-can button-header-delete'></i></button>
+          <li class="notes__header__buttons"><button type="button" class="notes__header__button-archived" data-archived="false">
+              <i class="fa-solid fa-box-archive notes__header__button-archived__icon"></i></button>
+            <button type="button" class="notes__header__button-delete"><i class='fa-solid fa-trash-can notes__header__button-delete__icon'></i></button>
           </li>
         </ul>
 
-        <ul class="notes-list js-notes"></ul>
-        <div class="button-wrapper">
-          <button type="button" class="button-create" data-modal-open>Create Note</button>
+        <ul class="notes__list js-notes"></ul>
+        <div class="notes__button-wrapper">
+          <button type="button" class="notes__button-create" data-modal-open>Create Note</button>
         </div>
       </section>
       <section class="summary">
-        <ul class='summary-header summary-header__list'>
+        <ul class='summary__header summary__header__list'>
 
-          <li class='summary-header__item column-one'>Note Category</li>
-          <li class='summary-header__item column-two'>Active</li>
-          <li class='summary-header__item column-three'>Archived</li>
+          <li class='summary__header__item column-one'>Note Category</li>
+          <li class='summary__header__item column-two'>Active</li>
+          <li class='summary__header__item column-three'>Archived</li>
 
         </ul>
-        <ul class="summary-list js-summary"></ul>
+        <ul class="summary__list js-summary"></ul>
       </section>
     </div>
   </main>
@@ -53,12 +53,12 @@
           <use href="./images/sprite.svg#icon-close"></use>
         </svg></button>
 
-      <form autocomplete="off" class="form-modal">
-        <h3 class="modal__title">New note:</h3>
-        <ul class="form-inputs js-modal">
+      <form autocomplete="off" class="modal__form">
+        <h3 class="modal__form__title">New note:</h3>
+        <ul class="modal__form__inputs js-modal">
         </ul>
         </ul>
-        <button type="submit" class="form-modal__submit">Записать</button>
+        <button type="submit" class="modal__form__submit">Записать</button>
       </form>
     </div>
   </div>

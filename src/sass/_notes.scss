@@ -7,12 +7,12 @@
   flex-grow: 1;
 }
 
-.notes-list {
+.notes__list {
   overflow: auto;
 }
 
-.notes-header__list,
-.notes-line__list {
+.notes__header__list,
+.notes__line__list {
   display: flex;
   padding: 5px;
   font-size: 20px;
@@ -20,7 +20,7 @@
   align-items: center;
 }
 
-.notes-header__list {
+.notes__header__list {
   background-color: grey;
   color: white;
   text-align: start;
@@ -40,9 +40,25 @@
   & .column-four {
     min-width: 500px;
   }
+  & .fa-archive::before {
+    color: white;
+  }
 }
 
-.notes-line__list {
+.notes__header__item {
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.notes__header__buttons {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-left: auto;
+  padding-right: 5px;
+}
+
+.notes__line__list {
   margin-top: 10px;
   background-color: rgb(237, 243, 250);
   & .column-one {
@@ -67,31 +83,13 @@
     align-items: baseline;
     justify-content: space-between;
   }
+  & > li {
+    padding: 5px;
+    margin-right: 5px;
+  }
 }
 
-.notes-header__item {
-  padding: 5px;
-  margin-right: 5px;
-}
-
-.notes-line__list > li {
-  padding: 5px;
-  margin-right: 5px;
-}
-
-.notes-header__buttons {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  margin-left: auto;
-  padding-right: 5px;
-}
-
-.notes-header__list .fa-archive::before {
-  color: white;
-}
-
-.notes-line__column__wrapper {
+.notes__line__column__wrapper {
   border-radius: 50%;
   width: 35px;
   height: 35px;

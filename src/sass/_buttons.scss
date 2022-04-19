@@ -1,34 +1,41 @@
-.button-edit,
-.button-archived,
-.button-deleted,
-.button-delete-all {
+.notes__line__button-edit,
+.notes__header__button-archived,
+.notes__line__button-archived,
+.notes__line__button-deleted,
+.notes__header__button-delete {
   background-color: transparent;
   border: none;
   color: rgb(59, 58, 58);
 }
 
-.button-delete-all {
+.notes__header__button-delete,
+.notes__line__button-deleted {
   background-color: transparent;
   border: none;
 }
 
-.button-header-archived,
-.button-header-delete {
+.notes__header__button-archived__icon,
+.notes__header__button-delete__icon {
   color: white;
 }
 
-.button-header-archived.focus {
+.notes__header__button-archived__icon:focus,
+.notes__header__button-delete__icon:focus {
+  color: black;
+}
+
+.notes__header__button-archived__icon.focus {
   color: rgb(59, 58, 58);
 }
 
-.button-wrapper {
+.notes__button-wrapper {
   display: flex;
   justify-content: right;
   padding: 5px;
   margin-top: auto;
 }
 
-.button-create {
+.notes__button-create {
   padding: 5px;
   margin-top: auto;
   background-color: rgb(237, 243, 250);
