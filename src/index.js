@@ -11,10 +11,9 @@ let notesItems = [...initNotesItems]; //вводим переменную-мас
 
 const renderPage = function (arr = notesItems) {
   const signArchived = buttonArchived.dataset.archived;
-
   renderNotes(arr, signArchived);
   renderSummary(arr);
-  notesItems = [...arr];
+  notesItems = arr;
 };
 
 const toggleModal = function () {
@@ -22,8 +21,19 @@ const toggleModal = function () {
   modalBackdrop.classList.toggle('is-hidden');
 };
 
-const editNotes = function (event) {
-  const idNote = event.target.dataset.index;
+const defineNewArchivedValue = function (oldValue) {
+  let newValue;
+  if (oldValue === 'true') {
+    newValue = 'false';
+  }
+  if (oldValue === 'false') {
+    newValue = 'true';
+  }
+  return newValue;
+};
+
+const editNotes = function (elem) {
+  const idNote = elem.dataset.index;
   const editNote = notesItems.find(elem => elem.id === idNote);
   toggleModal();
   renderModal(editNote);
@@ -32,8 +42,8 @@ const editNotes = function (event) {
   modalForm.dataset.indexEditNote = idNote;
 };
 
-const archiveNotes = function (event) {
-  const idNote = event.target.dataset.index;
+const archiveNotes = function (elem) {
+  const idNote = elem.dataset.index;
   const updatedNotesItems = notesItems.map(elem => {
     if (elem.id === idNote) {
       return { ...elem, archived: !elem.archived };
@@ -43,24 +53,30 @@ const archiveNotes = function (event) {
   renderPage(updatedNotesItems);
 };
 
-const deleteNotes = function (event) {
-  const idNote = event.target.dataset.index;
+const deleteNotes = function (elem) {
+  const idNote = elem.dataset.index;
   const updatedNotesItems = notesItems.filter(elem => elem.id !== idNote);
   renderPage(updatedNotesItems);
 };
 
 const onClickButton = function (event) {
-  if (event.target.nodeName !== 'BUTTON') {
-    return;
+  let usedElem;
+  if (event.target.nodeName === 'I') {
+    usedElem = event.target.parentElement;
   }
-  if (event.target.classList.contains('button-edit')) {
-    editNotes(event);
+  if (event.target.nodeName === 'BUTTON') {
+    usedElem = event.target;
   }
-  if (event.target.classList.contains('button-archived')) {
-    archiveNotes(event);
+  if (!usedElem) return;
+
+  if (usedElem.classList.contains('button-edit')) {
+    editNotes(usedElem);
   }
-  if (event.target.classList.contains('button-deleted')) {
-    deleteNotes(event);
+  if (usedElem.classList.contains('button-archived')) {
+    archiveNotes(usedElem);
+  }
+  if (usedElem.classList.contains('button-deleted')) {
+    deleteNotes(usedElem);
   }
 };
 
@@ -103,23 +119,19 @@ const onSubmitForm = function (event) {
   toggleModal();
 };
 
-const defineNewArchivedValue = function (oldValue) {
-  let newValue;
-  if (oldValue === 'true') {
-    newValue = 'false';
-  }
-  if (oldValue === 'false') {
-    newValue = 'true';
-  }
-  return newValue;
-};
 const onClickButtonArchived = function (event) {
-  const currentValue = event.target.dataset.archived;
+  console.log('ia');
+
+  const currentValue = buttonArchived.dataset.archived;
   const newValue = defineNewArchivedValue(currentValue);
-  event.target.dataset.archived = newValue;
+  buttonArchived.dataset.archived = newValue;
+  document.querySelector('.button-header-archived').classList.toggle('focus');
   renderNotes(notesItems, newValue);
 };
 
+const onClickButtonDeleteAll = function () {
+  renderPage([]);
+};
 const buttonArchived = document.querySelector('.button-archived');
 
 renderPage(notesItems);
@@ -129,9 +141,11 @@ const modalBackdrop = document.querySelector('[data-modal]');
 const modalForm = document.querySelector('.form-modal');
 const createModalBtn = document.querySelector('[data-modal-open]');
 const closeModalBtn = document.querySelector('[data-modal-close]');
+const deleteAllBtn = document.querySelector('.button-delete-all');
 
 notesList.addEventListener('click', onClickButton);
 createModalBtn.addEventListener('click', onClickCreate);
 closeModalBtn.addEventListener('click', toggleModal);
 modalForm.addEventListener('submit', onSubmitForm);
 buttonArchived.addEventListener('click', onClickButtonArchived);
+deleteAllBtn.addEventListener('click', onClickButtonDeleteAll);

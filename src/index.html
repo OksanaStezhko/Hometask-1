@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
     crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/729deffcbd.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -20,9 +21,11 @@
           <li class="notes-header__item column-three">Category</li>
           <li class="notes-header__item column-four">Content</li>
           <li class="notes-header__item column-five">Dates</li>
-          <li class="notes-header_button">edit</li>
-          <li class="notes-header_button"><button class="button-archived" data-archived="false">archived</button></li>
-          <li class="notes-header_button">deleted</li>
+
+          <li class="notes-header__buttons"><button type="button" class="button-archived" data-archived="false">
+              <i class="fa-solid fa-box-archive button-header-archived"></i></button>
+            <button type="button" class="button-delete-all"><i class='fa-solid fa-trash-can button-header-delete'></i></button>
+          </li>
         </ul>
 
         <ul class="notes-list js-notes"></ul>
@@ -31,6 +34,13 @@
         </div>
       </section>
       <section class="summary">
+        <ul class='summary-header summary-header__list'>
+
+          <li class='summary-header__item column-one'>Note Category</li>
+          <li class='summary-header__item column-two'>Active</li>
+          <li class='summary-header__item column-three'>Archived</li>
+
+        </ul>
         <ul class="summary-list js-summary"></ul>
       </section>
     </div>

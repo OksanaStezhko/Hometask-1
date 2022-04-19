@@ -1,14 +1,9 @@
-<li class='summary-header'>
-  <ul class='summary-header__list'>
-    <li class='summary-header__item column-one'>Note Category</li>
-    <li class='summary-header__item column-two'>Active</li>
-    <li class='summary-header__item column-three'>Archived</li>
-
-  </ul>
-</li>
 {{#each this}}
   <li class='summary-line'>
     <ul class='summary-line__list'>
+      <li>
+        <div class='summary-line__column__wrapper'>
+          <i class='fa-solid fa-box-archive button-summary'></i></div></li>
       <li class='summary-line__column column-one'>{{category}}</li>
       <li class='summary-line__column column-two'>{{active}}</li>
       <li class='summary-line__column column-three'>{{archived}}</li>
