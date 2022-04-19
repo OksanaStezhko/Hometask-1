@@ -25,8 +25,14 @@ const sumNotes = function (arrInit) {
 };
 
 const renderSummary = function (arr) {
-  const markup = summaryTemplate(sumNotes(arr));
   const summaryRef = document.querySelector('.js-summary');
+  if (!arr.length) {
+    summaryRef.innerHTML = '';
+    return;
+  }
+
+  const markup = summaryTemplate(sumNotes(arr));
+
   summaryRef.innerHTML = '';
   summaryRef.insertAdjacentHTML('beforeend', markup);
 };

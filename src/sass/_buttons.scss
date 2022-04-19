@@ -1,0 +1,34 @@
+.button-edit,
+.button-archived,
+.button-deleted,
+.button-delete-all {
+  background-color: transparent;
+  border: none;
+}
+
+.button-delete-all {
+  background-color: transparent;
+  border: none;
+}
+
+.button-header-archived,
+.button-header-delete {
+  color: rgb(247, 235, 235);
+}
+
+.button-header.focus {
+  color: black;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: right;
+  padding: 5px;
+  margin-top: auto;
+}
+
+.button-create {
+  padding: 5px;
+  margin-top: auto;
+  background-color: rgb(247, 235, 235);
+}

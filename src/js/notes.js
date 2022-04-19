@@ -14,11 +14,16 @@ const formatedNotes = function (arr) {
 };
 
 const renderNotes = function (arr, sign) {
+  const notesRef = document.querySelector('.js-notes');
+  if (!arr.length) {
+    notesRef.innerHTML = '';
+    return;
+  }
+
   const filteredArr = arr.filter(elem => String(elem.archived) === sign);
   const formatedArr = formatedNotes(filteredArr);
   const markup = notesTemplate(formatedArr);
 
-  const notesRef = document.querySelector('.js-notes');
   notesRef.innerHTML = '';
   notesRef.insertAdjacentHTML('beforeend', markup);
 };

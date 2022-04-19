@@ -1,69 +1,3 @@
-.notes-header__list,
-.notes-line__list,
-.summary-header__list,
-.summary-line__list {
-  display: flex;
-  padding: 10px;
-  font-size: 20px;
-}
-
-.notes-header__list,
-.summary-header__list {
-  background-color: grey;
-  color: white;
-}
-
-.notes-line__list,
-.summary-line__list {
-  margin-top: 10px;
-  background-color: gainsboro;
-}
-
-.notes-header__list > li {
-  padding: 5px;
-  margin-right: 5px;
-}
-.notes-line__list > li {
-  padding: 5px;
-  margin-right: 5px;
-}
-
-.column-one {
-  width: 200px;
-}
-
-.column-two {
-  width: 200px;
-}
-
-.column-three {
-  width: 200px;
-}
-
-.column-four {
-  width: 500px;
-  // flex-grow: 1;
-}
-
-.column-five {
-  width: 300px;
-}
-
-.button-wrapper {
-  display: flex;
-  justify-content: right;
-  padding: 5px;
-  margin-top: auto;
-}
-.button-create {
-  padding: 5px;
-  margin-top: auto;
-}
-
-.summary {
-  overflow: auto;
-}
-
 .notes {
   height: 70%;
   display: flex;
@@ -74,6 +8,85 @@
 }
 
 .notes-list {
-  // height: 60vh;
   overflow: auto;
+}
+
+.notes-header__list,
+.notes-line__list {
+  display: flex;
+  padding: 5px;
+  font-size: 20px;
+  justify-content: start;
+  align-items: center;
+}
+
+.notes-header__list {
+  background-color: grey;
+  color: white;
+  text-align: start;
+  text-align: center;
+  & .column-one {
+    min-width: 300px;
+  }
+
+  & .column-two {
+    min-width: 200px;
+  }
+
+  & .column-three {
+    min-width: 200px;
+  }
+
+  & .column-four {
+    min-width: 500px;
+  }
+}
+
+.notes-line__list {
+  margin-top: 10px;
+  background-color: rgb(247, 235, 235);
+  & .column-one {
+    min-width: 250px;
+  }
+
+  & .column-two {
+    min-width: 200px;
+  }
+
+  & .column-three {
+    min-width: 200px;
+  }
+
+  & .column-four {
+    min-width: 500px;
+  }
+
+  & .column-six {
+    margin-left: auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+
+.notes-header__item {
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.notes-line__list > li {
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.notes-header__buttons {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-left: auto;
+  padding-right: 5px;
+}
+
+.notes-header__list .fa-archive::before {
+  color: white;
 }
