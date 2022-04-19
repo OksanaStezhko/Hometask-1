@@ -17,7 +17,7 @@ const renderPage = function (arr = notesItems) {
 };
 
 const toggleModal = function () {
-  document.body.classList.toggle('modal-open'); //????
+  // document.body.classList.toggle('modal-open'); //????
   modalBackdrop.classList.toggle('is-hidden');
 };
 

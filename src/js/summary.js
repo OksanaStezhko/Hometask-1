@@ -1,4 +1,5 @@
 import summaryTemplate from '../templates/summary.hbs';
+import { categories } from '../js/variables.js';
 
 const sumNotes = function (arrInit) {
   const arrRes = arrInit.reduce((acc, elem, idx, array) => {
@@ -17,6 +18,7 @@ const sumNotes = function (arrInit) {
         category: elem.category,
         active: +!elem.archived,
         archived: +elem.archived,
+        image: categories[elem.category],
       };
       return [...acc, newItem];
     }
