@@ -1,7 +1,9 @@
 import moment from 'moment';
 import { categories } from '../js/variables.js';
 
-const re = /[0-1]?[0-9][-\.\/][0-3]?[0-9][-\.\/][12][09][0-9][0-9]/g;
+const re =
+  /((([0-2\d|3[01])[-\.\/](0\d|1[0-2]))|((0\d|1[0-2])[-\.\/]([0-2]\d|3[01]))[-\.\/][12]?[09]?[0-9][0-9])|([12]?[09]?[0-9][0-9]-(0\d|1[0-2])-([0-2]\d|3[01]))/g;
+const re2 = /[0-1]?[0-9][-\.\/][0-3]?[0-9][-\.\/][12][09][0-9][0-9]/g;
 
 const formatedNotes = function (arr) {
   const formatedArr = arr.map(elem => {

@@ -65,11 +65,10 @@ const onClickButton = function (event) {
     usedElem = event.target;
   }
   if (!usedElem) return;
-
   if (usedElem.classList.contains('notes__line__button-edit')) {
     editNotes(usedElem);
   }
-  if (usedElem.classList.contains('notes__header__button-archived')) {
+  if (usedElem.classList.contains('notes__line__button-archived')) {
     archiveNotes(usedElem);
   }
   if (usedElem.classList.contains('notes__line__button-deleted')) {

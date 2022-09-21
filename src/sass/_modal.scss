@@ -15,6 +15,10 @@
     pointer-events: none;
   }
 }
+.form-select {
+  padding: 4px;
+  flex-grow: 1;
+}
 
 .modal {
   position: relative;
@@ -23,7 +27,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 600px;
-  height: 300px;
+  min-height: 300px;
 
   background-color: $text-on-dark;
   box-shadow: $shadow-modal;
@@ -61,7 +65,6 @@
 }
 
 .modal__form {
-  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -70,23 +73,26 @@
 
 .modal__form__inputs {
   padding: 20px;
-  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
 
-.modal__form__inputs__field {
-  display: flex;
-  justify-content: space-between;
-}
+  &__item {
+    padding: 8px 2px;
+  }
 
-.modal__form__inputs__label {
-  width: 100px;
-}
+  &__field {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.modal__form__inputs__input,
-.form-select {
-  flex-grow: 1;
+  &__label {
+    width: 100px;
+  }
+
+  &__input {
+    padding: 4px;
+    flex-grow: 1;
+  }
 }
