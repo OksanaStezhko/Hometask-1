@@ -11,7 +11,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
-  background-color: rgb(206, 198, 198);
+  background-color: fff;
 }
 
 h1,
@@ -32,4 +32,8 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+button {
+  cursor: pointer;
 }
