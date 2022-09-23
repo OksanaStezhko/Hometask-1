@@ -1,23 +1,21 @@
 import moment from 'moment';
 import { categories } from '../js/variables.js';
-
 const re =
-  /((([0-2\d|3[01])[-\.\/](0\d|1[0-2]))|((0\d|1[0-2])[-\.\/]([0-2]\d|3[01]))[-\.\/][12]?[09]?[0-9][0-9])|([12]?[09]?[0-9][0-9]-(0\d|1[0-2])-([0-2]\d|3[01]))/g;
-const re2 = /[0-1]?[0-9][-\.\/][0-3]?[0-9][-\.\/][12][09][0-9][0-9]/g;
+  /(([12][0-9]\d{2}-\d{2}-\d{2})|((0\d|1[0-2])|\b[1-9])[-\.\/](([0-2]\d|3[01])|[1-9])[-\.\/][12]\d{1,3})/g;
 
-const formatedNotes = function (arr) {
-  const formatedArr = arr.map(elem => {
-    const formatedDate = moment(elem.created).locale('en').format('MMM DD, YYYY');
+const formattedNotes = function (arr) {
+  const formattedArr = arr.map(elem => {
+    const formattedDate = moment(elem.created).locale('en').format('MMM DD, YYYY');
     const arrDates = elem.content.match(re);
     const selectionDates = !!arrDates ? arrDates.join(', ') : '';
     return {
       ...elem,
-      created: formatedDate,
+      created: formattedDate,
       dates: selectionDates,
       image: categories[elem.category],
     };
   });
-  return formatedArr;
+  return formattedArr;
 };
 
 const sumNotes = function (arrInit) {
@@ -45,4 +43,4 @@ const sumNotes = function (arrInit) {
   return arrRes;
 };
 
-export { sumNotes, formatedNotes };
+export { sumNotes, formattedNotes };

@@ -12,7 +12,7 @@
     "name": "The theory of evolution",
     "created": "2022-01-05",
     "category": "Random Thought",
-    "content": "The evolution 05/01/2020 with 03-03-2022",
+    "content": "The evolution 05/01/2020",
     "archived": false
   },
   {
@@ -36,7 +36,7 @@
     "name": "Books",
     "created": "2022-02-15",
     "category": "Task",
-    "content": "The Lean Startup 2021-12-12, 2021/29",
+    "content": "The Lean Startup 2021-12-12",
     "archived": false
   },
   {
@@ -49,10 +49,18 @@
   },
   {
     "id": "5422",
-    "name": "Homework",
+    "name": "Different available formats",
     "created": "2022-03-03",
     "category": "Task",
-    "content": "Code at 06/03/2021 and 12-01-22",
+    "content": "3/3/2022, 05-08-2022, 08.08.21, 3/12/20 ",
+    "archived": false
+  },
+  {
+    "id": "5423",
+    "name": "Different wrong formats",
+    "created": "2022-03-03",
+    "category": "Task",
+    "content": "13/31/2022, 45-11-2022, 08.08.33, 2022/15/30 ",
     "archived": false
   }
 ]

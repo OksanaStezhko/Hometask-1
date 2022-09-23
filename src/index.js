@@ -1,11 +1,11 @@
 import './sass/main.scss';
 import moment from 'moment';
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as createID } from 'uuid';
 
 import initNotesItems from './data/notes.json';
 import { renderNotes, renderSummary, renderModal } from './js/render';
 
-let notesItems = [...initNotesItems]; //вводим переменную-массив для корректного редактирования notes
+let notesItems = [...initNotesItems];
 
 const renderPage = function (arr = notesItems) {
   const signArchived = buttonArchived.dataset.archived;
@@ -89,6 +89,7 @@ const onSubmitForm = function (event) {
   const idNote = event.target.dataset.indexEditNote;
   const modalMode = event.target.dataset.mode;
   const elementsForms = event.target.elements;
+
   let updatedNotesItems = [];
   const newNote = {
     name: elementsForms[0].value,
@@ -98,7 +99,7 @@ const onSubmitForm = function (event) {
   };
 
   if (modalMode === 'create') {
-    updatedNotesItems = [...notesItems, { ...newNote, id: uuidv4(), archived: false }];
+    updatedNotesItems = [...notesItems, { ...newNote, id: createID(), archived: false }];
   }
   if (modalMode === 'edit') {
     updatedNotesItems = notesItems.map(elem => {
@@ -108,7 +109,6 @@ const onSubmitForm = function (event) {
       return elem;
     });
   }
-
   renderPage(updatedNotesItems);
 
   event.target.reset();
