@@ -1,7 +1,7 @@
 <li class='modal__form__inputs__item'>
   <label class='modal__form__inputs__field'><span class='modal__form__inputs__label'>Name:</span>
 
-    <textarea name='name' rows = '1' class='modal__form__inputs__input' />{{#if name}}{{name}}{{/if}} </textarea>
+    <textarea name='name' rows = '1' required class='modal__form__inputs__input'  />{{#if name}}{{name}}{{/if}}</textarea>
   </label>
 </li>
 <li class='modal__form__inputs__item'>
@@ -27,6 +27,6 @@
 
 <li class='modal__form__inputs__item'>
   <label class='modal__form__inputs__field'><span class='modal__form__inputs__label'>Content:</span>
-    <textarea name='comment' rows='3' class='modal__form__inputs__input'>{{#if content}}{{content}}{{/if}}</textarea>
+    <textarea name='comment' rows='3' required class='modal__form__inputs__input'>{{#if content}}{{content}}{{/if}}</textarea>
   </label>
 </li>

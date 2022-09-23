@@ -1,7 +1,7 @@
 import modalTemplate from '../templates/modal.hbs';
 import summaryTemplate from '../templates/summary.hbs';
 import notesTemplate from '../templates/notes.hbs';
-import { formatedNotes, sumNotes } from './utils';
+import { formattedNotes, sumNotes } from './utils';
 
 const renderNotes = function (arr, sign) {
   const notesRef = document.querySelector('.js-notes');
@@ -11,8 +11,8 @@ const renderNotes = function (arr, sign) {
   }
 
   const filteredArr = arr.filter(elem => String(elem.archived) === sign);
-  const formatedArr = formatedNotes(filteredArr);
-  const markup = notesTemplate(formatedArr);
+  const formattedArr = formattedNotes(filteredArr);
+  const markup = notesTemplate(formattedArr);
 
   notesRef.innerHTML = '';
   notesRef.insertAdjacentHTML('beforeend', markup);
