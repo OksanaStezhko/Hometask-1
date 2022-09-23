@@ -8,7 +8,7 @@
   <label class='modal__form__inputs__field'><span class='modal__form__inputs__label'>Created:</span>
     <input
       type='date'
-      name='created'
+      name='created' required
       class='modal__form__inputs__input js-date-created'
       {{#if created}} value={{created}} {{/if}}
     />
@@ -16,7 +16,7 @@
 </li>
 <li class='modal__form__inputs__item'>
   <label class='modal__form__inputs__field'><span class='modal__form__inputs__label'>Category:</span>
-    <select name='category' class='form-select js-category-select' id='category-select'>
+    <select name='category' required class='form-select js-category-select' id='category-select'>
               <option value="Task">Task</option>
               <option value="Random Thought" >Random Thought</option>
               <option value="Idea">Idea</option>
